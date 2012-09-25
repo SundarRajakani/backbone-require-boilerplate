@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# put the correct base for your folder (if needed)
+RewriteBase /test/require/shim
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule (?!^index\.php)^(.+)$ #$1 [L,NC,R,NE]

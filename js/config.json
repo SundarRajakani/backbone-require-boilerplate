@@ -1,0 +1,9 @@
+{
+	"name" : "app",
+	"version" : "1",
+	"debug" : "true",
+	"history" : {
+		"pushState" : true,
+		"root" : "/test/require/shim/"
+	}
+}
