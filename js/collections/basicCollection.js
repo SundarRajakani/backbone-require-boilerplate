@@ -27,7 +27,9 @@ define([
 		},
 
 		_bindEventHandlers : function(){
-			this.on('change', this.redraw, this);
+                        // only redraw the big picture if the collection has changed
+			// if a collection's item has changed, it will update it's own view
+			this.on('add remove', this.redraw, this);
 
 			return this;
 		},
